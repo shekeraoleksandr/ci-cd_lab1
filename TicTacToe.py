@@ -5,8 +5,15 @@ class TicTacToe:
     def __init__(self):
         self.board = []
 
+    def create_board(self):
+        for i in range(3):
+            row = []
+            for j in range(3):
+                row.append('-')
+            self.board.append(row)
 
 
 # starting the game
 tic_tac_toe = TicTacToe()
 tic_tac_toe.start()
+
