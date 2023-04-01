@@ -11,6 +11,9 @@ class TicTacToe:
             for j in range(3):
                 row.append('-')
             self.board.append(row)
+    def fix_spot(self, row, col, player):
+        self.board[row][col] = player
+
 
 
 # starting the game
