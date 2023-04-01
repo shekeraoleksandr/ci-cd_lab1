@@ -14,7 +14,12 @@ class TicTacToe:
     def fix_spot(self, row, col, player):
         self.board[row][col] = player
 
-
+    def is_board_filled(self):
+        for row in self.board:
+            for item in row:
+                if item == '-':
+                    return False
+        return True
 
 # starting the game
 tic_tac_toe = TicTacToe()
