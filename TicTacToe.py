@@ -94,6 +94,12 @@ class TicTacToe:
         print()
         self.show_board()
 
+    def show_board(self):
+        for row in self.board:
+            for item in row:
+                print(item, end=" ")
+            print()
 # starting the game
 tic_tac_toe = TicTacToe()
 tic_tac_toe.start()
+
