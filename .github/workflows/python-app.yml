@@ -37,7 +37,7 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=20 --max-line-length=127 --statistics
         # Generate an HTML report of the Flake8 results
-        flake8 --format=html --htmldir=flake8-report --quiet .
+        flake8 --format=html --htmldir=flake8-report/ --quiet
     - name: Test with pytest
       run: |
         # Run pytest and generate an HTML report of the results
