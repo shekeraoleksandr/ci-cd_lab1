@@ -1,7 +1,7 @@
 import pytest
 from TicTacToe import TicTacToe
 
-#test using fixture
+#test config fixture
 @pytest.fixture
 def game():
     tic_tac_toe = TicTacToe()
