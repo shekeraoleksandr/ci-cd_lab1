@@ -1,8 +1,6 @@
 import random
 from TicTacToe import TicTacToe
 
-#test using monkeypatch
-
 
 def test_get_random_first_player(monkeypatch):
     monkeypatch.setattr(random, 'randint', lambda a, b: 0)
