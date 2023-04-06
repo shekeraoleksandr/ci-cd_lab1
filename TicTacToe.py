@@ -5,6 +5,7 @@ class TicTacToe:
 
     def __init__(self):
         self.board = []
+        self.n = 3
 
     def create_board(self):
         '''
@@ -12,9 +13,9 @@ class TicTacToe:
         :return:
         full board
         '''
-        for i in range(3):
+        for i in range(self.n):
             row = []
-            for j in range(3):
+            for j in range(self.n):
                 row.append('-')
             self.board.append(row)
 
