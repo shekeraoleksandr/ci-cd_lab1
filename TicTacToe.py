@@ -7,6 +7,11 @@ class TicTacToe:
         self.board = []
 
     def create_board(self):
+        '''
+        this method creates an empty board filled with -
+        :return:
+        full board
+        '''
         for i in range(3):
             row = []
             for j in range(3):
@@ -14,12 +19,27 @@ class TicTacToe:
             self.board.append(row)
 
     def get_random_first_player(self):
+        '''
+        this method chooses a player which turn It is on random
+        :return:
+        random player id
+        '''
         return random.randint(0, 1)
 
     def fix_spot(self, row, col, player):
+        '''
+        this method is used to fix spot a player's chosen location
+        :return:
+        chosen position into array
+        '''
         self.board[row][col] = player
 
     def is_player_win(self, player):
+        '''
+        this method finds out whether the player meets the win condition
+        :return:
+        win=false/true
+        '''
         win = None
 
         n = len(self.board)
@@ -63,6 +83,11 @@ class TicTacToe:
         return False
 
     def is_board_filled(self):
+        '''
+        this finds out whether the board is filled resulting in a draw
+        :return:
+        full true if yes,false if no
+        '''
         for row in self.board:
             for item in row:
                 if item == '-':
@@ -70,15 +95,30 @@ class TicTacToe:
         return True
 
     def swap_player_turn(self, player):
+        '''
+        this swaps the player's turn
+        :return:
+        player's index (x or 0)
+        '''
         return 'X' if player == 'O' else 'O'
 
     def show_board(self):
+        '''
+        this is used to show the board created with create_board
+        :return:
+        create_board
+        '''
         for row in self.board:
             for item in row:
                 print(item, end=" ")
             print()
 
     def start(self):
+        '''
+        this is the main function
+        :return:
+        final view of the board
+        '''
         self.create_board()
 
         player = 'X' if self.get_random_first_player() == 1 else 'O'
