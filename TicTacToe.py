@@ -1,7 +1,5 @@
 import random
 
-import char as char
-
 
 class TicTacToe:
 
