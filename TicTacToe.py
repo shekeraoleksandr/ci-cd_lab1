@@ -1,5 +1,7 @@
 import random
 
+import char as char
+
 
 class TicTacToe:
 
@@ -27,7 +29,7 @@ class TicTacToe:
         '''
         return random.randint(0, 1)
 
-    def fix_spot(self, row, col, player):
+    def fix_spot(self, row: int, col: int, player: chr):
         '''
         this method is used to fix spot a player's chosen location
         :return:
@@ -35,7 +37,7 @@ class TicTacToe:
         '''
         self.board[row][col] = player
 
-    def is_player_win(self, player):
+    def is_player_win(self, player: chr):
         '''
         this method finds out whether the player meets the win condition
         :return:
@@ -95,7 +97,7 @@ class TicTacToe:
                     return False
         return True
 
-    def swap_player_turn(self, player):
+    def swap_player_turn(self, player: chr):
         '''
         this swaps the player's turn
         :return:
